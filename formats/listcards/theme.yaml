@@ -1,0 +1,50 @@
+# "listcards" format - measured from ref/HXlzMVlWEAERy-i.png + ref/HXlzNV3WkAAxyA6.png
+# All sizes are px on a 1920px-wide layout canvas (the reference's native width).
+# Any key can be overridden per-carousel under `theme:` in a content file's front matter.
+
+canvas:
+  ref: {w: 1920, h: 2596, out_w: 1920}   # exact reference size
+  ig:  {w: 1680, h: 2100, out_w: 1080}   # Instagram 4:5 -> 1080x1350 (type ~14% larger vs canvas than ref)
+  x:   {w: 1440, h: 2560, out_w: 1080}   # 9:16 vertical -> 1080x1920 (X / Stories / Reels)
+  x-compact: {w: 1665, h: 2960, out_w: 1080}  # 9:16 -> 1080x1920, smaller type (~21px body) so ~5 cards/slide
+  ig-tall: {w: 1680, h: 2240, out_w: 1080}  # 3:4 -> 1080x1440
+
+colors:
+  bg: "#FFFFFF"
+  title: "#111111"
+  heading: "#111111"
+  body: "#222222"
+  accent: "#FF006C"        # bullet dots
+  highlight: "#FFA6CC"     # marker behind key words in the title
+  border: "#E6E6E6"        # card outline
+
+type:
+  family: "Inter"
+  title_size: 66
+  title_weight: 700
+  title_tracking: -0.047   # em
+  heading_size: 38
+  heading_weight: 600
+  heading_tracking: -0.019
+  body_size: 32
+  body_weight: 400
+  body_tracking: 0
+  body_line_height: 50     # px (wrapped-line pitch)
+
+space:
+  page_x: 112              # left/right/min top/bottom margin
+  title_to_cards: 74
+  card_gap: 32
+  card_pad_x: 52           # inside the 2px border
+  card_pad_top: 45
+  card_pad_bottom: 41
+  heading_to_body: 22.5
+  bullet_gap: 13.33
+  bullet_indent: 16        # card edge -> dot
+  bullet_text_x: 49        # card edge -> text
+  dot_size: 11
+  card_radius: 24
+  border_w: 2
+  highlight_h: 44
+  highlight_pad_x: 11
+  fit_slack: 4             # px a slide may overflow its margins before a card moves to the next slide
